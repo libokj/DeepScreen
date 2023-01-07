@@ -1,0 +1,5 @@
+_target_: deepscreen.datamodules.components.featurizers.protein_to_onehot
+_partial_: true
+
+max_sequence_length: 1000
+in_channels: 26

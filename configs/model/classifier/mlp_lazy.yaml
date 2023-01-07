@@ -1,0 +1,5 @@
+_target_: deepscreen.models.components.mlp_lazy.MLP
+
+out_channels: 1
+hidden_channels: [1024,1024,512]
+dropout: 0.1

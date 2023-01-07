@@ -1,0 +1,12 @@
+_target_: deepscreen.models.components.transformer
+
+input_dim: 8420
+emb_size: 64
+max_position_size: 545 50
+dropout: 0.1
+n_layer: 2
+intermediate_size: 256
+num_attention_heads: 4
+attention_probs_dropout: 0.1
+hidden_dropout: 0.1
+

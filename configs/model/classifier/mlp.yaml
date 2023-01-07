@@ -1,0 +1,6 @@
+_target_: deepscreen.models.components.mlp.MLP
+
+input_channels: ${eval:${model.drug_encoder.out_channels}+${model.protein_encoder.out_channels}}
+out_channels: 1
+hidden_channels: [1024,1024,512]
+dropout: 0.1

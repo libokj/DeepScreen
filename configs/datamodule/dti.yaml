@@ -1,0 +1,23 @@
+_target_: deepscreen.datamodules.dti_datamodule.DTIDataModule
+
+data_dir: ${paths.data_dir}
+dataset_name: davis
+drug_featurizer: onehot
+protein_featurizer: onehot
+batch_size: 128
+train_val_test_split: [0.7, 0.1, 0.2]
+num_workers: 4
+pin_memory: false
+logarithmic: true
+binarization: false
+threshold: 316
+shuffle: false
+drop_last: false
+predict: false
+
+defaults:
+  - _self_
+  - drug_featurizer: onehot
+  - protein_featurizer: onehot
+# TODO: add input feature encoding options
+# TODO: find a way to implement correspondence between models/encoders and feature encoding

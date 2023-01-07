@@ -1,0 +1,5 @@
+_target_: deepscreen.datamodules.components.featurizers.smiles_to_label
+_partial_: true
+
+max_sequence_length: 100
+in_channels: 63

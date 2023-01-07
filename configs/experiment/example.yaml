@@ -1,0 +1,32 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /datamodule: dti.yaml
+  - override /model: dti.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+tags: ["dti"]
+
+seed: 12345
+
+trainer:
+  min_epochs: 1
+  max_epochs: 100
+  gradient_clip_val: 0.5
+
+model:
+  optimizer:
+    lr: 0.0001
+  protein_encoder: cnn
+  drug_encoder: cnn
+
+datamodule:
+  dataset_name: kiba
+  batch_size: 64

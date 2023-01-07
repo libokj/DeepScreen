@@ -1,0 +1,12 @@
+_target_: deepscreen.models.dti.DTI
+
+binarization: false
+
+defaults:
+  - _self_
+  - drug_encoder: cnn
+  - protein_encoder: cnn
+  - classifier: mlp
+  - optimizer: adam
+  - preset: null
+
